@@ -1,6 +1,9 @@
-package dev.java.CadastroDePessoas;
+package dev.java.CadastroDePessoas.Pessoa;
 
+import dev.java.CadastroDePessoas.Trabalhos.CarrosModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 // Entity ele tranforma uma classe em uma entidade do bancode dados
 // JPA = java Persistence API
@@ -14,6 +17,11 @@ public class PessoaModel {
     private String nome;
     private String email;
     private int idade;
+
+    // @ManyToOne uma pessoa tem um carro
+    @ManyToOne
+    @JoinColumn(name = "Carros_id") // chave estrangeira para conectar as tabelas
+    private CarrosModel Carros;
 
     public PessoaModel() {
 

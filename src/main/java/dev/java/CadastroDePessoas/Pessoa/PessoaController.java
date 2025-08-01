@@ -1,4 +1,4 @@
-package dev.java.CadastroDePessoas;
+package dev.java.CadastroDePessoas.Pessoa;
 
 import org.springframework.web.bind.annotation.*;
 
